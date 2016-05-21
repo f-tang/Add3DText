@@ -576,7 +576,7 @@ vtkSmartPointer<vtkPolyData>qSlicerAdd3DTextModuleWidget::ProjectText(vtkPolyDat
 	Q_D(qSlicerAdd3DTextModuleWidget);
 
 	vtkIdType numTextPoint = PolyText->GetNumberOfPoints();
-	auto cellPicker = vtkSmartPointer<vtkCellPicker>::New();
+	vtkSmartPointer<vtkCellPicker> cellPicker = vtkSmartPointer<vtkCellPicker>::New();
 // 	cellPicker->InitializePickList();
 // 	cellPicker->AddPickList(mActor);
 // 	cellPicker->PickFromListOn();
